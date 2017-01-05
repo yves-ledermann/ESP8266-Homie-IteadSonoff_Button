@@ -69,7 +69,7 @@ void setupHardware() {
 // -----------------------------------------------------------------------------
 
 void setupHomie() {
-  Homie_setFirmware("APP_NAME", "APP_VERSION");
+  Homie_setFirmware(APP_NAME, APP_VERSION);
   Homie.setLedPin(PIN_LED, LOW).setResetTrigger(PIN_BUTTON, LOW, 5000);
   switchNode.advertise("on").settable(switchOnHandler);
   Homie.setLoopFunction(loopHandler);
